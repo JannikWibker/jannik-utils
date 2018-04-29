@@ -1,0 +1,9 @@
+{
+  "name": "jannik-utils",
+  "version": "1.0.0",
+  "description": "A small collection of utility functions",
+  "main": "index.js",
+  "repository": "https://github.com/JannikWibker/jannik-utils",
+  "author": "Jannik Wibker",
+  "license": "MIT"
+}
