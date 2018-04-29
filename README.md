@@ -1,4 +1,4 @@
-## ./lib/datastructures.js
+## lib/datastructures.js
 
 ### array_last, array.last
 last item in array
@@ -73,7 +73,7 @@ destructure({a:1, b:2, c:3}, ['a', 'b']) // -> {a:1, b:2}
 ```
 
 
-## ./lib/other.js
+## lib/other.js
 
 ### isNode
 checks if the current execution environment is node.js or not
