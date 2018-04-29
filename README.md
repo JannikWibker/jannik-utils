@@ -111,9 +111,47 @@ replace_all('abcdefg', ['a', 'b', 'c'], ['A', 'B', 'C']) // -> 'ABCdefg'
 ```
 
 ### is_primitive
-abc
+checks if a given value `x` is a primitive datatype or not
 ```js
 is_primitive(1) // -> true
 is_primitive("1") // -> true
 is_primitive(new Number(1)) // -> false
+```
+
+
+## lib/dates.js
+
+### setTime
+creates a new js date object from the given js `date` object and sets the time to the specified values (which are all 0 by default)
+```js
+setTime(new Date(), 1, 2, 3) // -> some_date
+```
+
+### setTimeIgnoreTimezone
+just like the setTime function, but ignores the current timezone offset by subtracting it from the minutes (js dates handle negative values kind of well)
+```js
+setTimeIgnoreTimezone(new Date(), 1, 2, 3) // -> some_date
+```
+
+### compareWithoutTime
+compares two js date objects ignoring the time (by setting the time of both objects to 0 and comparing their value then)
+```js
+compareWithoutTime(new Date(), new Date()) // -> true
+```
+
+### humanize
+the input `time` is a given date, the output is the difference between now and the given date in a human readable form (like '3 hours ago' or '1 year from now'). This is similar to the `fromNow()` function from moment.js. `n` is an optional parameter (which is 0 by default) which controls the number of digits after the comma / dot / whatever.
+```js
+humanize(new Date()) // -> 'just now'
+humanize(Date.parse('04 Dec 1995 00:12:00 GMT')) // -> '22 years ago'
+humanize(Date.parse('04 Dec 1995 00:12:00 GMT'), 3) // -> '22.403 years ago'
+```
+
+
+## lib/markdown.js
+
+### remove_markdown
+removes markdown artifacts from given string (`md`)
+```js
+remove_markdown('**foobar** *foo* ***bar***') // -> 'foobar foo bar'
 ```

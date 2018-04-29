@@ -4,7 +4,9 @@ const {readFile, writeFile} = require('fs')
 
 const files = [
   'lib/datastructures.js',
-  'lib/other.js'
+  'lib/other.js',
+  'lib/dates.js',
+  'lib/markdown.js',
 ]
 
 const read = (file) => new Promise((resolve, reject) =>
