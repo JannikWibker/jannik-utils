@@ -89,6 +89,15 @@ range(5) // -> [0, 1, 2, 3, 4]
 
 ### clean
 clean array or object of anything that is not permitted in JSON (like functions or circular datastructures)
+```js
+clean({a: 1, b: '2', c: () => 3}) // -> {a: 1, b: '2'}
+```
+
+### last
+returns the last element of any given array
+```js
+last(['A', 'B', 'C']) // -> 'C'
+```
 
 ### proxy
 log a value to the console and return this value
