@@ -1,5 +1,5 @@
 {
-  "name": "jannik-utils",
+  "name": "utils",
   "version": "1.0.0",
   "description": "A small collection of utility functions",
   "main": "index.js",
