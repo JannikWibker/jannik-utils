@@ -1,6 +1,6 @@
 {
   "name": "@jannnik/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small collection of utility functions",
   "main": "index.js",
   "repository": "https://github.com/JannikWibker/jannik-utils",
